@@ -1,5 +1,6 @@
 package com.example.faisal;
 
+import com.example.faisal.repositories.impl.BaseImpl;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -14,7 +15,7 @@ import javax.validation.ValidatorFactory;
 
 @SpringBootApplication
 @Slf4j
-@EnableJpaRepositories(basePackages = {"com.example.faisal.repositories"})
+@EnableJpaRepositories(basePackages = {"com.example.faisal.repositories"}, repositoryBaseClass = BaseImpl.class)
 @EnableTransactionManagement
 @EnableWebMvc
 @PropertySource(value = "${spring.config.location:classpath}:application-${spring.profiles.active}.properties",

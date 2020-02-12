@@ -1,7 +1,9 @@
 package com.example.faisal.models;
 
+import com.example.faisal.configs.postgres.PostgresEnumType;
 import lombok.Data;
 import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.TypeDef;
 import org.hibernate.annotations.UpdateTimestamp;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
@@ -12,6 +14,7 @@ import java.time.LocalDateTime;
 @MappedSuperclass
 @EntityListeners(AuditingEntityListener.class)
 @Data
+@TypeDef(name = "enum_postgres", typeClass = PostgresEnumType.class)
 public abstract class Base implements Serializable {
 
     @Id

@@ -17,6 +17,10 @@ import javax.validation.constraints.NotNull;
 @Data
 public class User extends Base {
 
+    @Enumerated(EnumType.STRING)
+    @Type(type = "enum_postgres")
+    private UsersType userType;
+
     @NotNull
     private String name;
 

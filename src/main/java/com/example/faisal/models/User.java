@@ -1,7 +1,8 @@
 package com.example.faisal.models;
 
 import com.example.faisal.models.enums.UsersType;
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
 import org.hibernate.annotations.Type;
@@ -14,7 +15,8 @@ import javax.validation.constraints.NotNull;
 @DynamicInsert
 @DynamicUpdate
 @Table(name = "users")
-@Data
+@Getter
+@Setter
 public class User extends Base {
 
     @Enumerated(EnumType.STRING)

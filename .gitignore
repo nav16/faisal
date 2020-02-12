@@ -4,6 +4,8 @@ target/
 !**/src/main/**
 !**/src/test/**
 .DS_STORE
+application-prod.properties
+application-staging.properties
 
 ### STS ###
 .apt_generated

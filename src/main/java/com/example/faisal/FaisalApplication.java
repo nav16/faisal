@@ -6,11 +6,13 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 @SpringBootApplication
 @Slf4j
 @EnableJpaRepositories(basePackages = {"com.example.faisal.repositories"})
 @EnableTransactionManagement
+@EnableWebMvc
 @PropertySource(value = "${spring.config.location:classpath}:application-${spring.profiles.active}.properties",
         ignoreResourceNotFound = true)
 public class FaisalApplication {
